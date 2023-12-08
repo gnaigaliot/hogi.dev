@@ -2,7 +2,6 @@ import { ReactNode } from 'react'
 import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
-import Comments from '@/components/comments'
 import Link from '@/components/link'
 import PageTitle from '@/components/page-title'
 import SectionContainer from '@/components/section-container'
@@ -17,7 +16,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title } = content
+  const { date, title } = content
 
   return (
     <SectionContainer>
